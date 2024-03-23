@@ -16,7 +16,7 @@ export default function SpecialCard(props) {
 
                 </div>
                 <h3>{props.price}</h3>
-                <p>{props.description}</p>
+                <p className="description">{props.description}</p>
                 <Link className="special-button" to="/order">Order for Delivery</Link>
             </section>
         </article>

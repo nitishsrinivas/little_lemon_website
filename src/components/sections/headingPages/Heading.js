@@ -13,7 +13,7 @@ export default function Heading() {
                 </section>
 
                 <section className="header-image">
-                    <img src={require('../../../assets/food/Header.jpg')} alt="Little Lemon restaurant cuisine"></img>
+                    <img src={require('../../../assets/food/header.webp')} alt="Little Lemon restaurant cuisine"></img>
                 </section>
             </article>
       </header>

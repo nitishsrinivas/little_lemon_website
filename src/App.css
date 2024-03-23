@@ -63,17 +63,17 @@ Link:link {
 .action-button {
   background-color: #f4ce14;
   padding: 0.5rem 1rem 0.5rem 1rem;
-  border-radius: 0.2rem;
+  border-radius: 0.4rem;
   font-family: "Karla";
   font-size: 2rem;
+  border-width: 0px;;
 }
 
 .action-button:hover {
-  background-color: #495e57;
-  color: #eeeeee;
+  background-color: orange;
+  color: #000000;
   border-style: solid;
-  border-width: 1px;
-  border-color: #edefee;
+  border-width: 0px;
   transition: 0.2s;
 }
 
@@ -384,8 +384,7 @@ footer > menu {
 
 .header-reserve {
   width: 100vw; /* width of container */
-  height: 20rem; /* height of container */
-  object-fit: cover;
+  height: 30rem; /* height of container */
 }
 
 .reserve-header-text {
@@ -395,9 +394,10 @@ footer > menu {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  font-size: 25px;
+  font-size: 30px;
   border-radius: 0.5rem;
 }
+
 
 .reservation-form {
   padding: 2rem 0 0.5rem 0;

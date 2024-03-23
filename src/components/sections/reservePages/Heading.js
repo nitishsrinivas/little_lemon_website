@@ -1,4 +1,3 @@
-
 export default function Heading() {
   return (
     <header className="reserve-table">

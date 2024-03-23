@@ -1,4 +1,4 @@
-import FoodImage from "../../assets/food/order.jpg";
+import FoodImage from "../../assets/food/fooditem2.jpg";
 
 export default function Heading() {
   return (

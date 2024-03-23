@@ -1,0 +1,46 @@
+.reservation-container {
+    max-width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    transition: transform 0.3s ease;
+}
+  
+.reservation-details {
+    border: 1px solid #ccc;
+    padding: 20px;
+}
+  
+.reservation-details p {
+    margin: 10px 0;
+}
+
+.reservation-details span{
+    font-size: 1.2rem;
+}
+
+.reservation-actions {
+    margin-top: 20px;
+}
+  
+.confirm-button, .edit-button {
+    padding: 10px 20px;
+    margin: 0 10px;
+    cursor: pointer;
+}
+
+.confirm-button {
+    background-color: green;
+    color: white;
+    border: none;
+}
+
+.edit-button {
+    background-color: blue;
+    color: white;
+    border: none;
+}
+
+.reservation-container:hover {
+    transform: scale(1.5);
+    background-color: #D3D3D3;
+}

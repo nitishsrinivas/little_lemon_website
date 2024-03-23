@@ -2,24 +2,28 @@ import React from 'react';
 import { Carousel } from 'react-responsive-carousel';
 import Bruschetta from '../../../assets/food/bruschetta.jpeg';
 import FoodItem2 from '../../../assets/food/food2.jpeg';
-import FoodItem3 from '../../../assets/food/food3.jpeg';
+import FoodItem3 from '../../../assets/food/fooditem.webp';
 import FoodItem5 from '../../../assets/food/food6.webp';
+import foodItem1 from '../../../assets/food/fooditem2.jpg';
 import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 
 
 const images = [
     {
-        url: Bruschetta,
+        url: Bruschetta
     },
     {
-        url: FoodItem2,      
+        url: foodItem1
     },
     {
-        url: FoodItem3,
+        url: FoodItem2 
     },
     {
-        url: FoodItem5,
+        url: FoodItem3
+    },
+    {
+        url: FoodItem5
     }
 ]
 

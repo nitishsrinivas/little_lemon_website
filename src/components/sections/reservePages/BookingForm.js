@@ -1,4 +1,7 @@
 import { useState } from "react";
+import "./booking.css";
+import {Link} from 'react-router-dom';
+
 
 export default function ReservationForm(props) {
   const [fName, setFName] = useState("");
@@ -10,7 +13,8 @@ export default function ReservationForm(props) {
   const [occasion, setOccasion] = useState("");
   const [preferences, setPreferences] = useState("");
   const [comments, setComments] = useState("");
-
+  const [isBooked, setIsBooked] = useState(false);
+  
   const [finalTime, setFinalTime] = useState(
     props.availableTimes.map((times,index) => <option key={index}>{times}</option>)
   );
@@ -26,12 +30,56 @@ export default function ReservationForm(props) {
     setFinalTime(props.availableTimes.map((times,index) => <option key={index}>{times}</option>));
   }
 
-  function handleSubmitForm(event){
-    event.preventDefault();
+  const [time, setTime] = useState("PICK A TIME");
+
+  function handleTime(event){
+    setTime(event.target.value);
   }
 
-  return (
-    <form onSubmit={handleSubmitForm} className="reservation-form book-bg">
+  function updateReservation(){
+    setIsBooked(false) ;
+  }
+
+  function pickTime(){
+    if(time === "PICK A TIME" || time === "Select a time"){
+      return "red";
+    }
+    return "green";
+  }
+
+  function handleSubmitForm(event){
+    event.preventDefault();
+    setIsBooked(true);
+
+  }
+
+  const reservationCard = () => {
+    const tRed = pickTime();
+    return(
+      <div className="reservation-container">
+        <div className="reservation-details">
+          <p>First Name: <span id="fNameValue">{fName} </span></p>
+          <p>Last Name: <span id="lNameValue">{lName} </span></p>
+          <p>Email: <span id="emailValue">{email}</span></p>
+          <p>Phone Number: <span id="telValue">{tel}</span></p>
+          <p>Number of People:{people} <span id="peopleValue"></span></p>
+          <p>Date: <span id="dateValue">{date}</span></p>
+          <p>Time: <span style={{color:tRed}} id="timeValue"> {time}</span></p>
+          <p>Occasion: <span id="occasionValue">{occasion}</span></p>
+          <p>Seating Preferences: <span id="preferencesValue">{preferences}</span></p>
+          <p>Additional Comments:  <span id="commentsValue">{comments}</span></p>
+        </div>
+        <div className="reservation-actions">
+          <Link to="/confirmation"><button className="confirm-button">Confirm</button></Link>
+          <button onClick={updateReservation} className="edit-button">Edit</button>
+        </div>
+      </div>
+    )
+  }
+
+  const handleForm = () => {
+    return(
+      <form onSubmit={handleSubmitForm} className="reservation-form book-bg">
       <div>
         <label htmlFor="fName">First Name</label> <br></br>
         <input
@@ -114,7 +162,8 @@ export default function ReservationForm(props) {
 
       <div>
         <label htmlFor="time">Select Time</label> <br></br>
-        <select id="time" required>
+        <select id="time" value={time} onChange={handleTime} required>
+          <option>Select a time</option>
           {finalTime}
         </select>
       </div>
@@ -164,12 +213,21 @@ export default function ReservationForm(props) {
         <br></br>
         <small>
           <p>
-            Note: You cannot edit your reservation after submission. Please
-            double-check your answer before submitting your reservation request.
+            Note: Please double-check your reservation-info before submitting your reservation request.
           </p>
         </small>
           <button className="action-button" type="submit">Book Table</button>
       </div>
     </form>
-  );
+      
+    )
+  }
+
+  return (
+    <>
+      {isBooked ? reservationCard() : handleForm()}
+    
+    </>
+     
+  )
 }
