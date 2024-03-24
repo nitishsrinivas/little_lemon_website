@@ -9,21 +9,21 @@ const specialCardsData = [
       id: "GreekSalad",
       image: GreekSalad,
       name: "Greek Salad",
-      price: "$12.99",
+      price: "$10.50",
       description: "Refreshing salad, made with tomato, lettuce, feta cheese, and olives. Dressed with salt, hot pepper, and olive oil."
     },
     {
       id: "Bruschetta",
       image: Bruschetta,
       name: "Bruschetta",
-      price: "$16.99",
+      price: "$14.99",
       description: "Toasted bread, topped with tomato, prosciutto, and cheese. Seasoned with salt and olive oil."
     },
     {
       id: "LemonDessert",
       image: LemonDessert,
       name: "Lemon Dessert",
-      price: "$8.50",
+      price: "$9.50",
       description: "Fresh baked lemon bread coated in salt and sugar. Powdered in citrus and lemon zest."
     }
   ];
