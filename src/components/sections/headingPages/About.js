@@ -8,11 +8,12 @@ export default function About() {
                 Despite the city's diversity, the two brothers recognized the lack of Mediterranean cuisine in Chicago, 
                 and were inspired to bring the flavors of their hometown in Italy to the people of Chicago. The two brothers 
                 continue to oversee the Little Lemon restaurant, nearly thirty years later.</p>
+                <p>Experience authentic Mediterranean cuisine at Little Lemon, a cherished Chicago gem. Immerse yourself in the flavors of their hometown, lovingly crafted and preserved for nearly three decades.</p>
             </section>
 
             <section className="double-image">
-                <img className="about-1" src={require('../../../assets/food/food3.jpeg')} alt="Little Lemon restaurant cuisine 1"></img>
-                <img className="about-2" src={require('../../../assets/food/food2.jpeg')} alt="Little Lemon restaurant cuisine 2"></img>
+                <img className="about-1" src={require('../../../assets/food/double2.jpg')} alt="Little Lemon restaurant cuisine 1"></img>
+                <img className="about-2" src={require('../../../assets/food/double.avif')} alt="Little Lemon restaurant cuisine 2"></img>
             </section>
     </article>
     );
