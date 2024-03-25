@@ -66,7 +66,7 @@ Link:link {
   border-radius: 0.4rem;
   font-family: "Karla";
   font-size: 2rem;
-  border-width: 0px;;
+  border-width: 0px;
 }
 
 .action-button:hover {
@@ -214,11 +214,22 @@ Link:link {
   padding: 0.5rem;
 }
 
+.order-container{
+  padding-bottom: 20px;
+  text-align: center;
+
+}
+.order-container h1{
+  background-color: #000000;
+  color: #ffffff;
+  font-family: "Roboto";
+}
+
 .special-button:hover {
   background-color: #495e57;
   color: #eeeeee;
   border-style: solid;
-  border-width: 0.1rem;
+  border-width: 0px;
   border-color: black;
   transition: 0.2s;
 }

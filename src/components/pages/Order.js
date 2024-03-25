@@ -1,15 +1,17 @@
-import FoodImage from "../../assets/food/fooditem2.jpg";
+import { useContext } from "react";
+import { ItemContext } from "../../context";
+import OrderItem from "./OrderItem";
+
 
 export default function Heading() {
+  const {items} = useContext(ItemContext);
   return (
-    <header className="reserve-table">
-      <img
-        className="header-reserve"
-        src={FoodImage}
-        alt="Little Lemon Ingredients"
-      ></img>
-      <div className="reserve-header-text">
+    <header className="order-container">
+      <div>
         <h1>Order Online</h1>
+      </div>
+      <div>
+        {items.map(item => <OrderItem key={item.id} image={item.img} name={item.name} price={item.price}/>)}
       </div>
     </header>
   );

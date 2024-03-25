@@ -10,6 +10,7 @@ import user7 from "../../../assets/testimonials/user7.jpeg";
 import user8 from "../../../assets/testimonials/user8.jpeg";
 
 
+
 const testimonials = [
     { name: "Micheal Caldwell", description: "This is the best Mediterranean food that I've ever had!", url: user1 },
     { name: "Alan Chen", description: "My Shiba Inu, Mugi, really loved the cozy vibes and delicious food here.", url: user2 },

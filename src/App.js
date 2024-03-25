@@ -1,13 +1,19 @@
 import "./App.css";
+import React from 'react';
 import Navbar from "./components/Navbar";
 import Routing from "./components/Routing";
 import Footer from "./components/Footer";
+import { ContextProvider } from "./context";
+
 function App() {
   return (
     <>
-      <Navbar />
-      <Routing />
-      <Footer />
+      <ContextProvider>
+        <Navbar />
+        <Routing />
+        <Footer />
+      </ContextProvider>
+      
     </>
   );
 }
