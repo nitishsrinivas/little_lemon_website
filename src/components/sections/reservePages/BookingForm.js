@@ -70,7 +70,7 @@ export default function ReservationForm(props) {
           <p>Additional Comments:  <span id="commentsValue">{comments}</span></p>
         </div>
         <div className="reservation-actions">
-          <Link to="/confirmation"><button className="confirm-button">Confirm</button></Link>
+          <Link to={`/confirmation/reservation`}><button className="confirm-button">Confirm</button></Link>
           <button onClick={updateReservation} className="edit-button">Edit</button>
         </div>
       </div>

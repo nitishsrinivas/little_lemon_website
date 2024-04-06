@@ -7,7 +7,7 @@ import { ItemContext } from '../../context';
 export default function OrderItem(props) {
     const {dispatch} = useContext(ItemContext);
 
-    const onIncrement = () =>{
+    const onIncrement = () => {
         dispatch({type:'ADD_ITEM',payload:{'id':props.id,'price':props.itemPrice}});
     }
     
@@ -15,7 +15,6 @@ export default function OrderItem(props) {
         if(props.count > 0) {
             dispatch({type:'DELETE_ITEM',payload:{'id':props.id,'itemPrice':props.itemPrice}})
         }
-        console.log(props.count);
         if(props.count === 1){
             dispatch({type:'DELETE',payload:{'id':props.id}})
         }

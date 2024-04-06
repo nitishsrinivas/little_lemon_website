@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
+import { ItemContext } from "../context";
+import { useContext } from "react";
 
 export default function Navigation(props) {
+  const {items} = useContext(ItemContext);
+  const count = items.length > 0 ? items.length :null;
   return (
     <menu className={`navbar-menu ${props.device}`}>
       {props.device === "mobile" ? (
@@ -32,7 +36,7 @@ export default function Navigation(props) {
         <h1>Reservations</h1>
       </Link>
       <Link className="hover-effect" to="/order">
-        <h1>Order</h1>
+        <h1>Order {items.length > 0 ? <span style={{fontSize:'25px', color:'green',padding:'13px',backgroundColor:'lightgrey',borderRadius:'50%'}}>{count}</span>:null}</h1>
       </Link>
       <Link className="hover-effect" to="/login">
         <h1>Login</h1>

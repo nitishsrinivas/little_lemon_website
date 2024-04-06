@@ -18,7 +18,7 @@ export default function Routing() {
       <Route path="/order" element={<Order />} />
       <Route path="/login" element={<Login />} />
 
-      <Route path="/confirmation" element={<Confirmation />} />
+      <Route path="/confirmation/:id" element={<Confirmation />} />
     </Routes>
   );
 }

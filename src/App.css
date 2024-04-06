@@ -104,6 +104,17 @@ Link:link {
   grid-template-columns: 5fr 1fr;
 }
 
+.hover-effect{
+  font-size: 1rem;
+}
+
+@media screen and ( min-width:600px )and (max-width:900px){
+  .hover-effect{
+    font-size : 0.7rem !important;
+  }
+  
+}
+
 .hover-effect:hover {
   background-color: #f4ce14;
   transition: 0.25s;

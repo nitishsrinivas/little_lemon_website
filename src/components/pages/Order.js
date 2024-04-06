@@ -2,10 +2,13 @@ import { useContext } from "react";
 import { ItemContext } from "../../context";
 import OrderItem from "./OrderItem";
 import "./order.css";
+import { Link } from "react-router-dom";
+
+
 
 
 export default function Heading(props) {
-  const {items} = useContext(ItemContext);
+  const {items,dispatch} = useContext(ItemContext);
   const convertPrice = (priceString1) =>{
     // Remove the "$" sign and convert to a floating-point number
     const price1 = parseFloat(priceString1.replace('$', ''));
@@ -50,7 +53,9 @@ export default function Heading(props) {
       <div className={`checkout-details ${displayTotal}`}>
         <p className="total">Total</p>
         <p className="total1">{convertPrice1(addPrices())}</p>
-        <button className="checkout">Checkout</button>
+        <Link to="/confirmation/checkout">
+          <button onClick={() => dispatch({type:'RESET'})} className="checkout">Checkout</button>
+        </Link>
     </div>
     </header>
   );

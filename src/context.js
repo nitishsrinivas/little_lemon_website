@@ -56,6 +56,10 @@ const itemReducer = (items,action) =>{
             const fileteredItems = items.filter(item => item.id !== action.payload.id);
             return fileteredItems;
 
+        case 'RESET':
+            items = [];
+            return items;
+
         default:
             return items;
     }     
